@@ -6,4 +6,4 @@ app = Flask(__name__)
 def iniciar():
     return render_template("html.html")
 
-app.run()
+app.run(host="0.0.0.0")
