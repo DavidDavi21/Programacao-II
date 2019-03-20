@@ -5,6 +5,9 @@
     <title>Page Início</title>
 </head>
 <body>
-    <a href ="listar_pessoas.html"> Liste as pessoas </a>
+	{%for p in usuario:%}
+	{{p.nome}} <br>
+	{%endfor%}
+<a href ="listar_pessoas.html"> Liste as pessoas </a>
 </body>
 </html>>
