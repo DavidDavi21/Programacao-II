@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-import Classe.py
+class Pessoa:
 
-
-render_template("html.html", usuario=lista)
+    def __init__(self, nome, endereco, telefone):
+        self.nome = nome
+        self.endereco = endereco
+        self.telefone = telefone
