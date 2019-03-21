@@ -3,13 +3,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 @app.route("/")
 
-class Pessoa:
+def naoadicionar():
+    return render_template("cadastrar.html", usuario = lista)
 
-    def __init__(self):
-        self.lista = ["Paula", "Rua 8", "3352-5253"
-                     "Tiago", "Beco das Flores", "9998-7071"]
-
-def iniciar():
-    return render_template("html.html", usuario = lista)
+@app.route("/adicionar_pessoa")
+def add():
+    nome = request.args.get("nome")
 
 app.run(host="0.0.0.0")
