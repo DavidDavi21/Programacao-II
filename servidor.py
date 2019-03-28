@@ -4,7 +4,7 @@ from Classe import Pessoa
 app = Flask(__name__)
 
 @app.route("/")
-def naoadicionar():
+def iniciar():
     return render_template("html.html")
 
 @app.route("/adicionar_pessoa")
