@@ -7,7 +7,7 @@ app = Flask(__name__)
 def iniciar():
     return render_template("html.html")
 
-@app.route("/adicionar_pessoa")
+@app.route("/cadastrar")
 def add():
     nome = request.args.get("nome")
     return nome
@@ -16,5 +16,5 @@ def add():
 def listar_pessoas():
     lista = [Pessoa("Jaoana", "Rua 21", "3333-3333")]
     return render_template("listar_pessoas.html", usuario=lista)
-
-app.run(host="0.0.0.0")
+    
+app.run(debug=True, host="0.0.0.0")
