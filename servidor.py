@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session, redirect
 from Classe import Pessoa
 
 app = Flask(__name__)
@@ -9,12 +9,15 @@ def iniciar():
 
 @app.route("/cadastrar")
 def add():
-    nome = request.args.get("nome")
-    return nome
+    nome = request.args.get("Nome")
+    endereco = request.args.get("Endereço")
+    telefone = request.args.get("telefone")
+    Pessoa(nome, endereco, telefone)
+    return render_template("cadastrar.html")
 
 @app.route("/listar_pessoas")
 def listar_pessoas():
-    lista = [Pessoa("Jaoana", "Rua 21", "3333-3333")]
+    lista = [Pessoa]
     return render_template("listar_pessoas.html", usuario=lista)
     
 app.run(debug=True, host="0.0.0.0")

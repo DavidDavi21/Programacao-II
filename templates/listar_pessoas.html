@@ -6,11 +6,12 @@
 <body>
 
 	{%for p in usuario%}
-		{{p.nome}}<br>
+		{{p.nome}} {{p.endereco}} {{p.telefone}} 
 	{%endfor%}
+	<a href = "/alterar_pessoas_form">A</a>
 
-    <a href = "/alterar_pessoas_form">Alterar Pessoas</a>
-    <a href = "/cadatrar"> Inserir Pessoas </a>
-    <a href = "/exibir_mensagem">Exibir mensagem</a>
+	<br>
+
+    <a href = "/cadastrar"> Inserir Pessoas </a>
 </body>
 </html>>
