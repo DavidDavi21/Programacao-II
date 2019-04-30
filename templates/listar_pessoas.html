@@ -4,14 +4,13 @@
     <title>Listar Pessoas</title>
 </head>
 <body>
-
+	Pessoas <hr>
 	{%for p in usuario%}
 		{{p.nome}} {{p.endereco}} {{p.telefone}} 
-	{%endfor%}
 	<a href = "/alterar_pessoas_form">A</a>
-
-	<br>
-
-    <a href = "/cadastrar"> Inserir Pessoas </a>
+    <a href = "/cadastrar">X</a>
+    <br>
+    {%endfor%}
+    <a href = "/cadastrar">Cadastrar Pessoa</a>
 </body>
-</html>>
+</html>
