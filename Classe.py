@@ -1,6 +1,7 @@
 class Pessoa:
 
-    def __init__(self, nome, endereco, telefone):
-        self.nome = nome
-        self.endereco = endereco
-        self.telefone = telefone
+    def __init__(self, codigo, nome, endereco, telefone):
+    	self.codigo = codigo
+    	self.nome = nome
+    	self.endereco = endereco
+    	self.telefone = telefone
