@@ -5,6 +5,13 @@
     <title>Page Início</title>
 </head>
 <body>
+	<h1>Página Inicial</h1>
+	{%if session["Usuário"]%}
+		<a href=/logout> Sair </a>
+	{%else%}
+		<a href=/form_login>Login</a><br>
+	{%endif%}
+	<br>
     <a href ="/listar_pessoas"> Liste as pessoas </a>
 </body>
 </html>
