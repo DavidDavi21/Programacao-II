@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de alteração de Pessoa</title>
+</head>
+<body>
+	<h1>Alterar Pessoas</h1>
+	<form action="/alterar_pessoas">
+		nome:<input type=text name=nome value={{pessoaz.nome}} required>
+		endereco:<textarea name=endereco value={{pessoaz.endereco}}></textarea>
+		telefone:<input type=text name=telefone value={{pessoaz.telefone}}>
+		<input type=submit value=alterar>
+		<input name=codigo value={{pessoaz.codigo}} type=hidden>
+	</form>
+</body>
+</html>

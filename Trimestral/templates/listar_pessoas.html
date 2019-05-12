@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liste as Pessoas</title>
+</head>
+<body>
+	<h1>Página para Listar as Pessoas</h1>
+	{%for p in usuario%}
+	{{p.nome}} | {{p.endereco}} | {{p.telefone}} | <a href="/formulario_alterar_pessoas?codigo={{p.codigo}}">Alterar</a> | <br>
+	{%endfor%}
+	<br>
+	<a href="/">Página Inicial</a> |
+	<a href="/formulario_cadastrar">Cadastrar Pessoas</a>
+</body>
+</html>
