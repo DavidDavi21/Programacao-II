@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from Classe import Pessoa
+from peewee import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "123"
 
-lista = []
+lista = Pessoa.select()
 
 @app.route("/")
 def iniciar():
@@ -25,7 +26,7 @@ def add():
 	endereco = request.args.get("endereco")
 	telefone = request.args.get("telefone")
 	pessoa = Pessoa(codigo, nome, endereco, telefone)
-	lista.append(pessoa)
+	nova = Pessoa.create(nome=request.form["nome"])
 	return redirect("/mostrar_mensagem")
 
 @app.route("/mostrar_mensagem")
