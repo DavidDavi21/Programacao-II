@@ -23,3 +23,6 @@ if __name__ == "__main__":
 		os.remove(arq)
 	db.connect()
 	db.create_tables([Pessoa])
+
+# TESTE PARA VERIFICAR SE ESSE NEGÓCIO DE BRANCH FUNCIONA MESMO
+'''UM NOVO TESTE TODOS OS DIAS, VAMOS VER SE DÁ'''
