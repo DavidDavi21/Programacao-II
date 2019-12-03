@@ -1,0 +1,48 @@
+{ 
+    "times":[ 
+       { 
+          "id":1,
+          "nome":"Sao Jos\u00e9 de Rio Rosa",
+          "jogadores":{ 
+             "id":1,
+             "nome":"Jo\u00e3o Kleber",
+             "idade":16,
+             "tamanho":1.75
+          },
+          "tecnico_do_time":{ 
+             "id":1,
+             "nome":"Fausto Silva",
+             "idade":45
+          }
+       }
+    ],
+    "id":1,
+    "organizacao":{ 
+       "id":1,
+       "nome":"CBF",
+       "data_evento":0.0011910669975186104
+    },
+    "esporte":{ 
+       "id":1,
+       "nome":"Futebol",
+       "caracteristicas":"bola"
+    },
+    "premiacoes":{ 
+       "id":1,
+       "equipe_premiada":{ 
+          "id":1,
+          "nome":"Sao Jos\u00e9de Rio Rosa",
+          "jogadores":{ 
+             "id":1,
+             "nome":"Jo\u00e3o Kleber",
+             "idade":16,
+             "tamanho":1.75
+          },
+          "tecnico_do_time":{ 
+             "id":1,
+             "nome":"Fausto Silva",
+             "idade":45
+          }
+       }
+    }
+ }
