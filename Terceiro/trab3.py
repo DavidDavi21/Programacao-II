@@ -31,7 +31,7 @@ class Time(BaseModel):
     nome = CharField()    
     jogadores = ForeignKeyField(Jogador)    
     tecnico_do_time = ForeignKeyField(Tecnico)
-    torcedor_do_time = ForeigKeyField(Torcedor)
+    torcedor_do_time = ForeignKeyField(Torcedor)
     
 class Esporte(BaseModel):    
     nome = CharField()    
@@ -58,6 +58,7 @@ class Campeonato(BaseModel):
     organizacao = ForeignKeyField(Organizacao)
     esporte = ForeignKeyField(Esporte)
     premiacoes = ForeignKeyField(Premiacao)
+    partidas = ForeignKeyField(Partida)
     
 if __name__ == "__main__":
     if os.path.exists(arq):
