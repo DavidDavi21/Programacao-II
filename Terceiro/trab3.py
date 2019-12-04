@@ -21,17 +21,17 @@ class Organizacao(BaseModel):
     nome = CharField()    
     data_evento = DateTimeField()
 
-class Time(BaseModel):    
-    nome = CharField()    
-    jogadores = ForeignKeyField(Jogador)    
-    tecnico_do_time = ForeignKeyField(Tecnico)
-
 class Torcedor(BaseModel):    
     nome = CharField()    
     idade = IntegerField()    
     tamanho = FloatField()    
-    nacionalidade = CharField()    
-    time_torcedor = ManyToManyField(Time)
+    nacionalidade = CharField()
+    
+class Time(BaseModel):    
+    nome = CharField()    
+    jogadores = ForeignKeyField(Jogador)    
+    tecnico_do_time = ForeignKeyField(Tecnico)
+    torcedor_do_time = ForeigKeyField(Torcedor)
     
 class Esporte(BaseModel):    
     nome = CharField()    
