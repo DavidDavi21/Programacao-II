@@ -3,17 +3,17 @@ from playhouse.shortcuts import model_to_dict, dict_to_model
 import json
 from trab3 import *
 
+#Peço desculpas caso esteja algo de errado, não consigo testar em cada por não conseguir instalar todos os aparates necessários
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "123"
-
 
 @app.route("/")
 def inicio():
     pessoas = list(map(model_to_dict, Campeonato.select()))
     response = jsonify({"lista": pessoas})
     response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+    return render_template("index.html", dados=response)
 
 app.run(debug=True)
 

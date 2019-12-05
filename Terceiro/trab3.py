@@ -86,6 +86,3 @@ if __name__ == "__main__":
     esporte1.equipes.add(time1)
     campeonato1.times.add(time1)
     partida1.jogo.add(time1)
-    
-    for i in premiacao_partida.jogador_premiado:
-        print(i.nome)
